@@ -1,1 +1,32 @@
-{{ question }}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Enquete</title>
+    <link rel="stylesheet" href="/static/styles.css"> 
+</head>
+<body>
+    <header>
+        <h1>Detalhes da Enquete</h1>
+        <nav>
+            <a href="/polls/">Voltar para enquetes</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>{{ question.question_text }}</h2>
+        <ul>
+            {% for choice in question.choice_set.all %}
+                <li>{{ choice.choice_text }}</li>
+            {% empty %}
+                <li>Sem opções disponíveis.</li>
+            {% endfor %}
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Polls Inc.</p>
+    </footer>
+</body>
+</html>

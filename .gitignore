@@ -1,0 +1,59 @@
+# Byte-compiled / cache / temp files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.VENV/
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.sqlite3
+db.sqlite3
+*.py[cod]
+media/
+staticfiles/
+
+# Local .env files
+.env
+.env.*
+
+# VSCode settings
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Pytest cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+coverage.xml
+*.cover
+.cache
+
+# Migrations (opcional, só se quiser ignorar auto-gerados em alguns projetos)
+# Se quiser versionar as migrações, remova as 3 linhas abaixo:
+**/migrations/*.pyc
+**/migrations/*.pyo
+**/migrations/__pycache__/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+
+# Pylint
+pylint-report.txt
+pylint-global.txt

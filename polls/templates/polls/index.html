@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquetes - Django</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}"> 
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Polls</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="/polls/">Enquetes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Últimas Enquetes</h2>
+
+        {% if latest_question_list %}
+            <ul>
+                {% for question in latest_question_list %}
+                    <li>
+                        <a href="{% url 'polls:detail' question.id %}">
+                            {{ question.question_text }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No polls are available.</p>
+        {% endif %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Polls Inc.</p>
+    </footer>
+</body>
+</html>
